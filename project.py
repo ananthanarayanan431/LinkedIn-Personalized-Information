@@ -49,4 +49,4 @@ def FinalCall(Name:str,CompanyName:str)->Tuple[Summary,Facts,Interest,IceBreaker
     )
 
 if __name__ == "__main__":
-    print(FinalCall("Karan Rai",""))
+    print(FinalCall("Karan Rai","Lauch Ventures"))
