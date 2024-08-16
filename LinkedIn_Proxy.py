@@ -6,7 +6,7 @@ from constant import PROXYCURL_API_KEY
 os.environ['PROXYCURL_API_KEY']=PROXYCURL_API_KEY
 
 
-def scrape_linkedin_profile(linkedin_profile_url: str):
+def get_linkedin_information(linkedin_profile_url: str):
     """scrape information from LinkedIn profiles,
     Manually scrape the information from the LinkedIn profile"""
 
@@ -48,7 +48,7 @@ def scrape_linkedin_profile(linkedin_profile_url: str):
 
 if __name__ == "__main__":
     print(
-        scrape_linkedin_profile(
+        get_linkedin_information(
             linkedin_profile_url="https://www.linkedin.com/in/rananthanarayananofficial/",
         )
     )
