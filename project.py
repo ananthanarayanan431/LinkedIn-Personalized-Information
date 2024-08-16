@@ -14,31 +14,30 @@ def FinalCall(Name:str,CompanyName:str)->Tuple[Summary,Facts,Interest,IceBreaker
 
     summary_chain=SummaryChain()
     summ:Summary=summary_chain.invoke(
-        input={'information':ProfileData},
+        input={'information':ProfileData,'information1':PostData},
     )
 
     facts_chain=FactsChain()
     facts:Facts=facts_chain.invoke(
-        input={'information':ProfileData},
+        input={'information':ProfileData,'information1':PostData},
     )
 
     interst_chain=InterstChain()
     inter:Interest=interst_chain.invoke(
-        input={'information':ProfileData},
+        input={'information':ProfileData,'information1':PostData},
     )
 
     background=BackgroundChain()
     back:Background=background.invoke(
-        input={'information':ProfileData},
+        input={'information':ProfileData,'information1':PostData},
     )
 
     icebreaker=IceBreakerChain()
     ice:IceBreaker=icebreaker.invoke(
-        input={'information':ProfileData},
+        input={'information':ProfileData,'information1':PostData},
     )
 
     profile_url=ProfileData['data']['profile_image_url']
-
 
     return (
         summ,
@@ -50,4 +49,4 @@ def FinalCall(Name:str,CompanyName:str)->Tuple[Summary,Facts,Interest,IceBreaker
     )
 
 if __name__ == "__main__":
-    print(FinalCall("Karan Rai","Lauch Ventures"))
+    print(FinalCall("Karan Rai",""))

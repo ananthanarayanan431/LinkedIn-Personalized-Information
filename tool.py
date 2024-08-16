@@ -3,7 +3,7 @@
 import requests
 import openai
 import http.client
-import json, re 
+import json, re
 import os
 
 from constant import SERPER_API_KEY
